@@ -1,2 +1,3 @@
 # class_wait_rf
-class_wait_rf.js
+Name: Wait window Class JS RF
+Site: http://class-wait.appspot.com/
