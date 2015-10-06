@@ -19,7 +19,7 @@ function classWait() {
      this.height = 0; // Specifies the height of the divBox (px)
 
      this.isImage = true;
-     this.srcImage = "images/class_wait_clock.png"; // Source of Image
+     this.srcImage = "images/clock.png"; // Source of Image
      this.divImage = {}; // Object divImage
      this.imgImage = {}; // Object Image
 
@@ -70,18 +70,14 @@ function classWait() {
              obj.style.backgroundColor = "rgba(0,0,0,0.4)";
              obj.style.overflow = "hidden";
              // Prevent the selection of text
-             obj.onmousedown = function( o ) {
-                 return function( e ) {
+             obj.onmousedown = function( o ) { return function( e ) {
                      if ( e.target !== o ) return true;
                      else return false;
-                 }
-             } ( obj );
-             obj.onselectstart = function( o ) {
-                 return function( e ) {
+             } } ( obj );
+             obj.onselectstart = function( o ) { return function( e ) {
                      if ( e.target !== o ) return true;
                      else return false;
-                 }
-             } ( obj );
+             } } ( obj );
              //
              document.body.appendChild(obj);
          }
@@ -97,10 +93,10 @@ function classWait() {
              obj.style.width = this.width + "px";
              obj.style.height = this.height + "px";
              obj.style.marginLeft = ( window.innerWidth - this.width ) / 2 + "px";
-             obj.style.marginTop = 0.8 * ( window.innerHeight - this.height ) / 2 + "px";
-             obj.style.backgroundColor = "linen";
-             obj.style.borderRadius = "7px";
-             obj.style.boxShadow = "0 0 20px";
+             obj.style.marginTop = 0.8 * ( window.innerHeight - this.height ) / 3 + "px";
+             obj.style.backgroundColor = "aliceblue";
+             obj.style.borderRadius = "3px";
+             obj.style.boxShadow = "0 0 10px";
              this.divFog.appendChild(obj);
          }
 
